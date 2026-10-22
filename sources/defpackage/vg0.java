@@ -1,0 +1,13 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003 */
+/* JADX INFO: loaded from: classes.dex */
+public final class vg0 extends sx1 implements zg0 {
+    public kv0 s;
+
+    @Override // defpackage.zg0
+    public final void j0(rc1 rc1Var) {
+        this.s.invoke(rc1Var);
+        rc1Var.c();
+    }
+}

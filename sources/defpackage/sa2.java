@@ -1,0 +1,27 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003 */
+/* JADX INFO: loaded from: classes.dex */
+public final class sa2 extends ab2 {
+    public final float c;
+
+    public sa2(float f) {
+        super(3);
+        this.c = f;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        return (obj instanceof sa2) && Float.compare(this.c, ((sa2) obj).c) == 0;
+    }
+
+    public final int hashCode() {
+        return Float.hashCode(this.c);
+    }
+
+    public final String toString() {
+        return g63.n(new StringBuilder("RelativeHorizontalTo(dx="), this.c, ')');
+    }
+}

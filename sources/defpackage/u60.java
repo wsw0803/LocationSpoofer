@@ -1,0 +1,15 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003 */
+/* JADX INFO: loaded from: classes.dex */
+public final class u60 {
+    public final t60 a;
+
+    public u60(t60 t60Var) {
+        this.a = t60Var;
+    }
+
+    public final String toString() {
+        return this.a.toString();
+    }
+}

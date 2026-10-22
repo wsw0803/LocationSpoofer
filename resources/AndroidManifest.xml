@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="30059"
+    android:versionName="3.0.20"
+    android:compileSdkVersion="37"
+    android:compileSdkVersionCodename="17"
+    package="com.vincenthzr.locationspoofer"
+    platformBuildVersionCode="37"
+    platformBuildVersionName="17">
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="37"/>
+    <queries>
+        <package android:name="com.eg.android.AlipayGphone"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature
+        android:name="android.hardware.vulkan.version"
+        android:required="true"
+        android:version="0x400003"/>
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false"/>
+    <permission
+        android:name="com.vincenthzr.locationspoofer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.vincenthzr.locationspoofer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+        android:label="LocationSpoofer"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:name="com.vincenthzr.locationspoofer.LocationApp"
+        android:description="@string/app_description"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@android:drawable/ic_menu_mylocation"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true">
+        <receiver
+            android:name="com.vincenthzr.locationspoofer.push.MessageDeliveryReceiver"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.vincenthzr.locationspoofer.UPDATE_SCHEME"
+            android:value="global"/>
+        <meta-data
+            android:name="com.vincenthzr.locationspoofer.LEGACY_GLOBAL_MIGRATION"
+            android:value="false"/>
+        <meta-data
+            android:name="com.vincenthzr.locationspoofer.RUNTIME_REVIEW_USB"
+            android:value="false"/>
+        <activity
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:name="com.vincenthzr.locationspoofer.MainActivity"
+            android:exported="true"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.vincenthzr.locationspoofer.provider.RuntimePayloadProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.vincenthzr.locationspoofer.runtime-payload"
+            android:grantUriPermissions="false"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.vincenthzr.locationspoofer.updates"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/update_paths"/>
+        </provider>
+        <service
+            android:name="com.vincenthzr.locationspoofer.service.PhysicalRouteRecordingService"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="location"/>
+        <service
+            android:name="com.vincenthzr.locationspoofer.service.SpoofingService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="location"/>
+        <service
+            android:name="com.vincenthzr.locationspoofer.service.FloatingJoystickService"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.vincenthzr.locationspoofer.service.SpoofingControlReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vincenthzr.locationspoofer.START"/>
+                <action android:name="com.vincenthzr.locationspoofer.STOP"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.vincenthzr.locationspoofer.service.BootCompletedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.vincenthzr.locationspoofer.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="io.github.libxposed.service.XposedProvider"
+            android:exported="true"
+            android:authorities="com.vincenthzr.locationspoofer.XposedService"/>
+    </application>
+</manifest>

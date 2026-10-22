@@ -1,0 +1,14 @@
+package defpackage;
+
+import java.util.Set;
+
+/* JADX INFO: compiled from: r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003 */
+/* JADX INFO: loaded from: classes.dex */
+public abstract class x83 {
+    public static final Set a = kp.q0(new vz2[]{cm3.b, hm3.b, xl3.b, mm3.b});
+
+    public static final boolean a(vz2 vz2Var) {
+        vz2Var.getClass();
+        return vz2Var.isInline() && a.contains(vz2Var);
+    }
+}

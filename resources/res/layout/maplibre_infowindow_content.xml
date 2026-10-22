@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.maplibre.android.annotations.BubbleLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="14dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:maplibre_bl_arrowDirection="bottom"
+    app:maplibre_bl_arrowHeight="8dp"
+    app:maplibre_bl_arrowPosition="16dp"
+    app:maplibre_bl_arrowWidth="8dp"
+    app:maplibre_bl_bubbleColor="@android:color/white"
+    app:maplibre_bl_cornersRadius="6dp"
+    app:maplibre_bl_strokeColor="@android:color/darker_gray"
+    app:maplibre_bl_strokeWidth="1dp">
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/infowindow_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:maxEms="17"
+        android:textIsSelectable="false"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/maplibre_gray"
+        android:id="@+id/infowindow_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:maxEms="17"
+        android:lineSpacingExtra="1dp"
+        android:textIsSelectable="false"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxEms="17"/>
+</org.maplibre.android.annotations.BubbleLayout>
