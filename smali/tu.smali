@@ -1,0 +1,882 @@
+.class public final Ltu;
+.super Ljava/lang/Object;
+.source "r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003"
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+
+# direct methods
+.method public constructor <init>(JJJJ)V
+    .registers 9
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-wide p1, p0, Ltu;->a:J
+
+    .line 5
+    .line 6
+    iput-wide p3, p0, Ltu;->b:J
+
+    .line 7
+    .line 8
+    iput-wide p5, p0, Ltu;->c:J
+
+    .line 9
+    .line 10
+    iput-wide p7, p0, Ltu;->d:J
+
+    .line 11
+    .line 12
+    return-void
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+    .line 112
+    .line 113
+    .line 114
+    .line 115
+    .line 116
+    .line 117
+    .line 118
+    .line 119
+    .line 120
+    .line 121
+    .line 122
+    .line 123
+    .line 124
+    .line 125
+    .line 126
+    .line 127
+    .line 128
+    .line 129
+    .line 130
+    .line 131
+    .line 132
+    .line 133
+    .line 134
+    .line 135
+    .line 136
+    .line 137
+    .line 138
+    .line 139
+    .line 140
+    .line 141
+    .line 142
+    .line 143
+    .line 144
+    .line 145
+    .line 146
+    .line 147
+    .line 148
+    .line 149
+    .line 150
+    .line 151
+    .line 152
+    .line 153
+    .line 154
+    .line 155
+    .line 156
+    .line 157
+    .line 158
+    .line 159
+    .line 160
+    .line 161
+    .line 162
+    .line 163
+    .line 164
+    .line 165
+    .line 166
+    .line 167
+    .line 168
+    .line 169
+    .line 170
+    .line 171
+    .line 172
+    .line 173
+    .line 174
+    .line 175
+    .line 176
+    .line 177
+    .line 178
+    .line 179
+    .line 180
+    .line 181
+    .line 182
+    .line 183
+    .line 184
+    .line 185
+    .line 186
+    .line 187
+    .line 188
+    .line 189
+    .line 190
+    .line 191
+    .line 192
+    .line 193
+    .line 194
+    .line 195
+    .line 196
+    .line 197
+    .line 198
+    .line 199
+    .line 200
+    .line 201
+    .line 202
+    .line 203
+    .line 204
+    .line 205
+    .line 206
+    .line 207
+    .line 208
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    .line 214
+.end method
+
+
+# virtual methods
+.method public final a(JJJJ)Ltu;
+    .registers 18
+
+    .line 1
+    const-wide/16 v1, 0x10
+
+    .line 2
+    .line 3
+    cmp-long v3, p1, v1
+
+    .line 4
+    .line 5
+    if-eqz v3, :cond_8
+
+    .line 6
+    .line 7
+    move-wide v3, p1
+
+    .line 8
+    goto :goto_a
+
+    .line 9
+    :cond_8
+    iget-wide v3, p0, Ltu;->a:J
+
+    .line 10
+    .line 11
+    :goto_a
+    cmp-long v5, p3, v1
+
+    .line 12
+    .line 13
+    if-eqz v5, :cond_10
+
+    .line 14
+    .line 15
+    move-wide v5, p3
+
+    .line 16
+    goto :goto_12
+
+    .line 17
+    :cond_10
+    iget-wide v5, p0, Ltu;->b:J
+
+    .line 18
+    .line 19
+    :goto_12
+    cmp-long v7, p5, v1
+
+    .line 20
+    .line 21
+    if-eqz v7, :cond_18
+
+    .line 22
+    .line 23
+    move-wide v7, p5
+
+    .line 24
+    goto :goto_1a
+
+    .line 25
+    :cond_18
+    iget-wide v7, p0, Ltu;->c:J
+
+    .line 26
+    .line 27
+    :goto_1a
+    cmp-long v1, p7, v1
+
+    .line 28
+    .line 29
+    if-eqz v1, :cond_21
+
+    .line 30
+    .line 31
+    move-wide/from16 v0, p7
+
+    .line 32
+    .line 33
+    goto :goto_23
+
+    .line 34
+    :cond_21
+    iget-wide v0, p0, Ltu;->d:J
+
+    .line 35
+    .line 36
+    :goto_23
+    new-instance v2, Ltu;
+
+    .line 37
+    .line 38
+    move-wide/from16 p7, v0
+
+    .line 39
+    .line 40
+    move-object p0, v2
+
+    .line 41
+    move-wide p1, v3
+
+    .line 42
+    move-wide p3, v5
+
+    .line 43
+    move-wide p5, v7
+
+    .line 44
+    invoke-direct/range {p0 .. p8}, Ltu;-><init>(JJJJ)V
+
+    .line 45
+    .line 46
+    .line 47
+    move-object v0, p0
+
+    .line 48
+    return-object v0
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+    .line 112
+    .line 113
+    .line 114
+    .line 115
+    .line 116
+    .line 117
+    .line 118
+    .line 119
+    .line 120
+    .line 121
+    .line 122
+    .line 123
+    .line 124
+    .line 125
+    .line 126
+    .line 127
+    .line 128
+    .line 129
+    .line 130
+    .line 131
+    .line 132
+    .line 133
+    .line 134
+    .line 135
+    .line 136
+    .line 137
+    .line 138
+    .line 139
+    .line 140
+    .line 141
+    .line 142
+    .line 143
+    .line 144
+    .line 145
+    .line 146
+    .line 147
+    .line 148
+    .line 149
+    .line 150
+    .line 151
+    .line 152
+    .line 153
+    .line 154
+    .line 155
+    .line 156
+    .line 157
+    .line 158
+    .line 159
+    .line 160
+    .line 161
+    .line 162
+    .line 163
+    .line 164
+    .line 165
+    .line 166
+    .line 167
+    .line 168
+    .line 169
+    .line 170
+    .line 171
+    .line 172
+    .line 173
+    .line 174
+    .line 175
+    .line 176
+    .line 177
+    .line 178
+    .line 179
+    .line 180
+    .line 181
+    .line 182
+    .line 183
+    .line 184
+    .line 185
+    .line 186
+    .line 187
+    .line 188
+    .line 189
+    .line 190
+    .line 191
+    .line 192
+    .line 193
+    .line 194
+    .line 195
+    .line 196
+    .line 197
+    .line 198
+    .line 199
+    .line 200
+    .line 201
+    .line 202
+    .line 203
+    .line 204
+    .line 205
+    .line 206
+    .line 207
+    .line 208
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    .line 214
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 6
+
+    .line 1
+    if-ne p0, p1, :cond_3
+
+    .line 2
+    .line 3
+    goto :goto_3a
+
+    .line 4
+    :cond_3
+    if-eqz p1, :cond_3c
+
+    .line 5
+    .line 6
+    instance-of v0, p1, Ltu;
+
+    .line 7
+    .line 8
+    if-nez v0, :cond_a
+
+    .line 9
+    .line 10
+    goto :goto_3c
+
+    .line 11
+    :cond_a
+    check-cast p1, Ltu;
+
+    .line 12
+    .line 13
+    iget-wide v0, p1, Ltu;->a:J
+
+    .line 14
+    .line 15
+    sget v2, Lxz;->h:I
+
+    .line 16
+    .line 17
+    iget-wide v2, p0, Ltu;->a:J
+
+    .line 18
+    .line 19
+    invoke-static {v2, v3, v0, v1}, Ldm3;->a(JJ)Z
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    if-nez v0, :cond_19
+
+    .line 24
+    .line 25
+    goto :goto_3c
+
+    .line 26
+    :cond_19
+    iget-wide v0, p0, Ltu;->b:J
+
+    .line 27
+    .line 28
+    iget-wide v2, p1, Ltu;->b:J
+
+    .line 29
+    .line 30
+    invoke-static {v0, v1, v2, v3}, Ldm3;->a(JJ)Z
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    if-nez v0, :cond_24
+
+    .line 35
+    .line 36
+    goto :goto_3c
+
+    .line 37
+    :cond_24
+    iget-wide v0, p0, Ltu;->c:J
+
+    .line 38
+    .line 39
+    iget-wide v2, p1, Ltu;->c:J
+
+    .line 40
+    .line 41
+    invoke-static {v0, v1, v2, v3}, Ldm3;->a(JJ)Z
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v0
+
+    .line 45
+    if-nez v0, :cond_2f
+
+    .line 46
+    .line 47
+    goto :goto_3c
+
+    .line 48
+    :cond_2f
+    iget-wide v0, p0, Ltu;->d:J
+
+    .line 49
+    .line 50
+    iget-wide p0, p1, Ltu;->d:J
+
+    .line 51
+    .line 52
+    invoke-static {v0, v1, p0, p1}, Ldm3;->a(JJ)Z
+
+    .line 53
+    .line 54
+    .line 55
+    move-result p0
+
+    .line 56
+    if-nez p0, :cond_3a
+
+    .line 57
+    .line 58
+    goto :goto_3c
+
+    .line 59
+    :cond_3a
+    :goto_3a
+    const/4 p0, 0x1
+
+    .line 60
+    return p0
+
+    .line 61
+    :cond_3c
+    :goto_3c
+    const/4 p0, 0x0
+
+    .line 62
+    return p0
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+    .line 112
+    .line 113
+    .line 114
+    .line 115
+.end method
+
+.method public final hashCode()I
+    .registers 5
+
+    .line 1
+    sget v0, Lxz;->h:I
+
+    .line 2
+    .line 3
+    iget-wide v0, p0, Ltu;->a:J
+
+    .line 4
+    .line 5
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    const/16 v1, 0x1f
+
+    .line 10
+    .line 11
+    mul-int/2addr v0, v1
+
+    .line 12
+    iget-wide v2, p0, Ltu;->b:J
+
+    .line 13
+    .line 14
+    invoke-static {v0, v1, v2, v3}, Lsd1;->b(IIJ)I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    iget-wide v2, p0, Ltu;->c:J
+
+    .line 19
+    .line 20
+    invoke-static {v0, v1, v2, v3}, Lsd1;->b(IIJ)I
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    iget-wide v1, p0, Ltu;->d:J
+
+    .line 25
+    .line 26
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result p0
+
+    .line 30
+    add-int/2addr p0, v0
+
+    .line 31
+    return p0
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+.end method

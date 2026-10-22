@@ -1,0 +1,642 @@
+.class public final Lm90;
+.super Lcb3;
+.source "r8-map-id-a1c503a56c9a2ef264f6f81f2a0105049fcac363127b412a4ae9ced1deff6003"
+
+# interfaces
+.implements Lkv0;
+
+
+# instance fields
+.field public final synthetic e:I
+
+.field public f:I
+
+.field public final synthetic g:Lwm2;
+
+.field public final synthetic h:Lkv0;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILg70;Lkv0;Lwm2;)V
+    .registers 5
+
+    .line 1
+    iput p1, p0, Lm90;->e:I
+
+    .line 2
+    .line 3
+    iput-object p4, p0, Lm90;->g:Lwm2;
+
+    .line 4
+    .line 5
+    iput-object p3, p0, Lm90;->h:Lkv0;
+
+    .line 6
+    .line 7
+    const/4 p1, 0x1
+
+    .line 8
+    invoke-direct {p0, p1, p2}, Lcb3;-><init>(ILg70;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+    .line 112
+    .line 113
+    .line 114
+    .line 115
+    .line 116
+    .line 117
+    .line 118
+    .line 119
+    .line 120
+    .line 121
+    .line 122
+    .line 123
+    .line 124
+    .line 125
+    .line 126
+    .line 127
+    .line 128
+    .line 129
+    .line 130
+    .line 131
+    .line 132
+    .line 133
+    .line 134
+    .line 135
+    .line 136
+    .line 137
+    .line 138
+    .line 139
+    .line 140
+    .line 141
+    .line 142
+    .line 143
+    .line 144
+    .line 145
+    .line 146
+    .line 147
+    .line 148
+    .line 149
+    .line 150
+    .line 151
+    .line 152
+    .line 153
+    .line 154
+    .line 155
+    .line 156
+    .line 157
+    .line 158
+    .line 159
+    .line 160
+    .line 161
+    .line 162
+    .line 163
+    .line 164
+    .line 165
+    .line 166
+    .line 167
+    .line 168
+    .line 169
+    .line 170
+    .line 171
+    .line 172
+    .line 173
+    .line 174
+    .line 175
+    .line 176
+    .line 177
+    .line 178
+    .line 179
+    .line 180
+    .line 181
+    .line 182
+    .line 183
+    .line 184
+    .line 185
+    .line 186
+    .line 187
+    .line 188
+    .line 189
+    .line 190
+    .line 191
+    .line 192
+    .line 193
+    .line 194
+    .line 195
+    .line 196
+    .line 197
+    .line 198
+    .line 199
+    .line 200
+    .line 201
+    .line 202
+    .line 203
+    .line 204
+    .line 205
+    .line 206
+    .line 207
+    .line 208
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    .line 214
+.end method
+
+
+# virtual methods
+.method public final create(Lg70;)Lg70;
+    .registers 5
+
+    .line 1
+    iget v0, p0, Lm90;->e:I
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lm90;->h:Lkv0;
+
+    .line 4
+    .line 5
+    iget-object p0, p0, Lm90;->g:Lwm2;
+
+    .line 6
+    .line 7
+    packed-switch v0, :pswitch_data_18
+
+    .line 8
+    .line 9
+    .line 10
+    new-instance v0, Lm90;
+
+    .line 11
+    .line 12
+    const/4 v2, 0x1
+
+    .line 13
+    invoke-direct {v0, v2, p1, v1, p0}, Lm90;-><init>(ILg70;Lkv0;Lwm2;)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-object v0
+
+    .line 17
+    :pswitch_10
+    new-instance v0, Lm90;
+
+    .line 18
+    .line 19
+    const/4 v2, 0x0
+
+    .line 20
+    invoke-direct {v0, v2, p1, v1, p0}, Lm90;-><init>(ILg70;Lkv0;Lwm2;)V
+
+    .line 21
+    .line 22
+    .line 23
+    return-object v0
+
+    .line 24
+    nop
+
+    .line 25
+    :pswitch_data_18
+    .packed-switch 0x0
+        :pswitch_10
+    .end packed-switch
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+.end method
+
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    .line 1
+    iget v0, p0, Lm90;->e:I
+
+    .line 2
+    .line 3
+    sget-object v1, Lrm3;->a:Lrm3;
+
+    .line 4
+    .line 5
+    check-cast p1, Lg70;
+
+    .line 6
+    .line 7
+    packed-switch v0, :pswitch_data_20
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p0, p1}, Lm90;->create(Lg70;)Lg70;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object p0
+
+    .line 14
+    check-cast p0, Lm90;
+
+    .line 15
+    .line 16
+    invoke-virtual {p0, v1}, Lm90;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object p0
+
+    .line 20
+    return-object p0
+
+    .line 21
+    :pswitch_14
+    invoke-virtual {p0, p1}, Lm90;->create(Lg70;)Lg70;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object p0
+
+    .line 25
+    check-cast p0, Lm90;
+
+    .line 26
+    .line 27
+    invoke-virtual {p0, v1}, Lm90;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object p0
+
+    .line 31
+    return-object p0
+
+    .line 32
+    nop
+
+    .line 33
+    :pswitch_data_20
+    .packed-switch 0x0
+        :pswitch_14
+    .end packed-switch
+    .line 34
+    .line 35
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 9
+
+    .line 1
+    iget v0, p0, Lm90;->e:I
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lm90;->h:Lkv0;
+
+    .line 4
+    .line 5
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    .line 6
+    .line 7
+    sget-object v3, Lo80;->e:Lo80;
+
+    .line 8
+    .line 9
+    iget-object v4, p0, Lm90;->g:Lwm2;
+
+    .line 10
+    .line 11
+    const/4 v5, 0x1
+
+    .line 12
+    const/4 v6, 0x0
+
+    .line 13
+    packed-switch v0, :pswitch_data_5e
+
+    .line 14
+    .line 15
+    .line 16
+    iget v0, p0, Lm90;->f:I
+
+    .line 17
+    .line 18
+    if-eqz v0, :cond_20
+
+    .line 19
+    .line 20
+    if-ne v0, v5, :cond_1b
+
+    .line 21
+    .line 22
+    :try_start_15
+    invoke-static {p1}, Lj03;->d0(Ljava/lang/Object;)V
+    :try_end_18
+    .catchall {:try_start_15 .. :try_end_18} :catchall_19
+
+    .line 23
+    .line 24
+    .line 25
+    goto :goto_2f
+
+    .line 26
+    :catchall_19
+    move-exception p0
+
+    .line 27
+    goto :goto_37
+
+    .line 28
+    :cond_1b
+    invoke-static {v2}, Lro;->n(Ljava/lang/String;)V
+
+    .line 29
+    .line 30
+    .line 31
+    move-object v3, v6
+
+    .line 32
+    goto :goto_36
+
+    .line 33
+    :cond_20
+    invoke-static {p1}, Lj03;->d0(Ljava/lang/Object;)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {v4}, Lwm2;->beginTransaction()V
+
+    .line 37
+    .line 38
+    .line 39
+    :try_start_26
+    iput v5, p0, Lm90;->f:I
+
+    .line 40
+    .line 41
+    invoke-interface {v1, p0}, Lkv0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object p1
+
+    .line 45
+    if-ne p1, v3, :cond_2f
+
+    .line 46
+    .line 47
+    goto :goto_36
+
+    .line 48
+    :cond_2f
+    :goto_2f
+    invoke-virtual {v4}, Lwm2;->setTransactionSuccessful()V
+    :try_end_32
+    .catchall {:try_start_26 .. :try_end_32} :catchall_19
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-virtual {v4}, Lwm2;->endTransaction()V
+
+    .line 52
+    .line 53
+    .line 54
+    move-object v3, p1
+
+    .line 55
+    :goto_36
+    return-object v3
+
+    .line 56
+    :goto_37
+    invoke-virtual {v4}, Lwm2;->endTransaction()V
+
+    .line 57
+    .line 58
+    .line 59
+    throw p0
+
+    .line 60
+    :pswitch_3b
+    iget v0, p0, Lm90;->f:I
+
+    .line 61
+    .line 62
+    if-eqz v0, :cond_4a
+
+    .line 63
+    .line 64
+    if-ne v0, v5, :cond_45
+
+    .line 65
+    .line 66
+    invoke-static {p1}, Lj03;->d0(Ljava/lang/Object;)V
+
+    .line 67
+    .line 68
+    .line 69
+    goto :goto_5c
+
+    .line 70
+    :cond_45
+    invoke-static {v2}, Lro;->n(Ljava/lang/String;)V
+
+    .line 71
+    .line 72
+    .line 73
+    move-object p1, v6
+
+    .line 74
+    goto :goto_5c
+
+    .line 75
+    :cond_4a
+    invoke-static {p1}, Lj03;->d0(Ljava/lang/Object;)V
+
+    .line 76
+    .line 77
+    .line 78
+    new-instance p1, Ll90;
+
+    .line 79
+    .line 80
+    const/4 v0, 0x0
+
+    .line 81
+    invoke-direct {p1, v0, v6, v1, v4}, Ll90;-><init>(ILg70;Lkv0;Lwm2;)V
+
+    .line 82
+    .line 83
+    .line 84
+    iput v5, p0, Lm90;->f:I
+
+    .line 85
+    .line 86
+    invoke-virtual {v4, v0, p1, p0}, Lwm2;->useConnection(ZLov0;Lg70;)Ljava/lang/Object;
+
+    .line 87
+    .line 88
+    .line 89
+    move-result-object p1
+
+    .line 90
+    if-ne p1, v3, :cond_5c
+
+    .line 91
+    .line 92
+    move-object p1, v3
+
+    .line 93
+    :cond_5c
+    :goto_5c
+    return-object p1
+
+    .line 94
+    nop
+
+    .line 95
+    :pswitch_data_5e
+    .packed-switch 0x0
+        :pswitch_3b
+    .end packed-switch
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+    .line 107
+    .line 108
+    .line 109
+    .line 110
+    .line 111
+    .line 112
+    .line 113
+    .line 114
+    .line 115
+.end method

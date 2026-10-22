@@ -12,41 +12,57 @@
 
 | 项目 | 值 |
 |---|---|
-| 应用名 | LocationSpoofer |
-| 包名 | `com.vincenthzr.locationspoofer` |
-| versionName | `3.0.20` |
-| versionCode | `30059` |
-| compileSdkVersion | `37` |
-| minSdkVersion | 见 `resources/AndroidManifest.xml` |
-| APK 大小 | 19565488 字节（约 18.7 MB） |
-| APK SHA-256 | `5a7c170fb8a8be1df9a1558650aaaeef59fb8616347ef07dd5df83d7772e6b59` |
+| jadx 版本 | 1.5.6 |
+| baksmali 版本 | 2.5.2 |
+| 反编译时间 | 2026-10-22 |
+| **Java 源文件** | 6007 个（45M，694,701 行） |
+| **smali 文件** | **6674 个（137M）— 100% 覆盖全部类** |
+| 资源文件 | 515 个（4.3M） |
+| jadx 未还原方法 | 126 处，分布在 84 个 .java 中（占方法总数 <2%） |
+
+> **关于完整性**：`smali/` 与 `sources/` 是同一份 `classes.dex` 的两种呈现。
+> smali 是**无损**的、覆盖 100% 的 6674 个类，可在其中找到任何方法的确切字节码语义；
+> jadx 的 Java 输出可读性高，但有 126 处方法因控制流过于复杂
+> （`JadxOverflowException` in `RegionMakerVisitor`，常见于 R8 优化后的 Kotlin 协程/状态机）
+> 未能还原，被留成 `/* JADX ERROR: ... */` 占位注释。
+> **需要精确逻辑时请以 `smali/` 为准。**
 
 ## 二、反编译统计
 
 | 项目 | 值 |
 |---|---|
-| 反编译工具 | jadx 1.5.6 |
+| jadx 版本 | 1.5.6 |
+| baksmali 版本 | 2.5.2 |
 | 反编译时间 | 2026-10-22 |
-| Java 源文件 | 6007 个 |
-| 源码目录/包 | 153 个 |
-| 代码行数 | 694701 行 |
-| 源码体积 | 45M |
+| Java 源文件 | 6007 个（45M，694,701 行） |
+| **smali 文件** | **6674 个（137M）— 100% 覆盖** |
 | 资源文件 | 515 个（4.3M） |
-| 反编译失败类 | 227 个（已跳过） |
+| jadx 未还原方法 | 126 处 / 84 个文件 |
+
+> **关于完整性**：`smali/` 与 `sources/` 是同一份 `classes.dex` 的两种呈现。
+> smali **无损、覆盖全部 6674 个类**，任何方法都能查到确切字节码；
+> jadx 的 Java 输出可读性更好，但有 126 处方法因控制流过于复杂
+> （`JadxOverflowException` in `RegionMakerVisitor`，常见于 R8 优化后的
+> Kotlin 协程/状态机）未能还原，留成 `/* JADX ERROR: ... */` 占位。
+> **需要精确逻辑时以 `smali/` 为准；日常阅读用 `sources/`。**
+
 
 ## 三、目录结构
 
 ```
 .
-├── sources/                     # jadx 反编译出的 Java 源码（按包名分层）
-│   ├── com/vincenthzr/locationspoofer/   ← 应用自身代码
-│   ├── android/  androidx/  kotlin/  ...   ← 依赖库
-│   └── defpackage/                        ← 默认包（混淆后无包名）
-├── resources/                   # 已解码的资源
+├── sources/                     # jadx 反编译的 Java 源码（按包名分层）
+│   ├── com/vincenthzr/locationspoofer/   ← 应用自身代码（695 个文件）
+│   ├── android/ androidx/ kotlin/ ...    ← 依赖库
+│   └── defpackage/                       ← 混淆后无包名的类
+├── smali/                       # baksmali 反汇编（无损，6674 个类）
+│   ├── com/vincenthzr/locationspoofer/
+│   └── *.smali                           ← 默认包的类直接在根目录
+├── resources/                   # 已解码资源
 │   ├── AndroidManifest.xml      # 已解码为明文
-│   ├── res/                     # 布局/图片/字符串等（XML 已解码）
+│   ├── res/                     # 布局/图片/字符串（XML 已解码）
 │   ├── assets/                  # 原始资源
-│   └── META-INF/  kotlin/  okhttp3/
+│   └── META-INF/ kotlin/ okhttp3/
 └── README.md
 ```
 
@@ -56,11 +72,17 @@
 ## 四、复现方式
 
 ```bash
-# 1) 源码
-jadx --no-res -d out/sources LocationSpoofer_3.0.20.apk
+APK=LocationSpoofer_3.0.20.apk
 
-# 2) 资源
-jadx --no-src -d out/resources LocationSpoofer_3.0.20.apk
+# 1) Java 源码（--no-res 省内存，适合小 RAM 设备）
+jadx --no-res -d out/sources "$APK"
+
+# 2) 资源（跳过源码，单独解一遍）
+jadx --no-src -d out/resources "$APK"
+
+# 3) 完整 smali（无损）
+unzip -o "$APK" classes.dex -d .
+baksmali d classes.dex -o out/smali
 ```
 
 ## 五、免责声明
